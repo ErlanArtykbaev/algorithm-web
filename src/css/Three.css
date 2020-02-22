@@ -1,0 +1,17 @@
+* {
+	font-family: sans-serif;
+}
+
+.Three-Start{
+	min-height: 100vh;
+	padding: 1.7em 14em;
+	font-size: 1.2em;
+
+}
+
+.title {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 25px;
+}
+
