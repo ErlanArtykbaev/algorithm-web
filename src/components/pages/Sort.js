@@ -1,13 +1,12 @@
 import React from 'react'
 
-import Menu from '../Menu'
-import Footer from '../Footer'
+import Menu from '../layer/Menu'
+import Footer from '../layer/Footer'
 import ThreeStart from './ThreeComponents/ThreeStart'
 import ThreeSortingVisualizer from './ThreeComponents/ThreeSortingVisualizer'
 
-import '../../css/Three.css'
 
-const Three = () => {
+const Sort = () => {
   return(
     <div>
       <Menu />
@@ -23,4 +22,4 @@ const Three = () => {
   )
 }
 
-export default Three
+export default Sort

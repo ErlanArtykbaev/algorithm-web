@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../css/SortingVisualizer.css'
 import {getMergeSortAnimations} from './SortingAlgorithms/MergeSort';
 import {getQuickSortAnimations} from './SortingAlgorithms/QuickSort';
 import {getInsertionSortAnimations} from './SortingAlgorithms/InsertionSort';

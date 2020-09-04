@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Menu from '../Menu'
-import Footer from '../Footer'
+import Menu from '../layer/Menu'
+import Footer from '../layer/Footer'
 
 const Eight = () => {
   return(

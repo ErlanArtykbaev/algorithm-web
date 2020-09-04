@@ -1,47 +1,59 @@
 import React from 'react'
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
 
 import Home from './components/Home'
-import One from './components/pages/One'
-import Two from './components/pages/Two'
-import Three from './components/pages/Three'
-import Four from './components/pages/Four'
-import Five from './components/pages/Five'
-import Six from './components/pages/Six'
-import Seven from './components/pages/Seven'
-import Eight from './components/pages/Eight'
-import Nine from './components/pages/Nine'
-
-
-import './css/App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Lists from './components/pages/Lists'
+import Queues from './components/pages/Queues'
+import Sort from './components/pages/Sort'
+import Tree from './components/pages/Tree'
+import Pyramids from './components/pages/Pyramids'
+import Hash from './components/pages/Hash'
+import Set from './components/pages/Set'
+import Map from './components/pages/Map'
+import Graph from './components/pages/Graph'
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Switch>
-          <Route path='/' component={Home} exact />
-          
-          <Route path='/one' component={One} />
-          <Route path='/two' component={Two} />
-          <Route path='/three' component={Three} />
-          <Route path='/four' component={Four} />
-          <Route path='/five' component={Five} />
-          <Route path='/six' component={Six} />
-          <Route path='/seven' component={Seven} />
-          <Route path='/eight' component={Eight} />
-          <Route path='/nine' component={Nine} />
-
-        
-        </Switch>
-      </div>
-    </BrowserRouter>
-    
+    <div>
+      <Router>
+          <Switch>
+            <Route path='/' exact>
+              <Home />
+            </Route>
+            <Route path='/lists'>
+              <Lists />
+            </Route>
+            <Route path='/stacks-queues'>
+              <Queues />
+            </Route>
+            <Route path='/sort'>
+              <Sort />
+            </Route>
+            <Route path='/tree'>
+              <Tree />
+            </Route>
+            <Route path='/pyramids'>
+              <Pyramids />
+            </Route>
+            <Route path='/hash'>
+              <Hash />
+            </Route>
+            <Route path='/set'>
+              <Set />
+            </Route>
+            <Route path='/map'>
+              <Map />
+            </Route>
+            <Route path='/graph'>
+              <Graph />
+            </Route>
+          </Switch>
+      </Router>
+    </div>
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Menu from '../Menu'
-import Footer from '../Footer'
+import Menu from '../layer/Menu'
+import Footer from '../layer/Footer'
 
-const Three = () => {
+const Lists = () => {
   return(
     <div>
       <Menu />
@@ -16,4 +16,4 @@ const Three = () => {
   )
 }
 
-export default Three
+export default Lists

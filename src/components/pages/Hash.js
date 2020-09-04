@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Menu from '../Menu'
-import Footer from '../Footer'
+import Menu from '../layer/Menu'
+import Footer from '../layer/Footer'
 
-const Six = () => {
+const Four = () => {
   return(
     <div>
       <Menu />
-      <div className="Six-main">
+      <div className= "Four-main">
         hello first
       </div>
        
@@ -16,4 +16,4 @@ const Six = () => {
   )
 }
 
-export default Six
+export default Four

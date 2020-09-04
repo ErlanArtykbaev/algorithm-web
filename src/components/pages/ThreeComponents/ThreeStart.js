@@ -1,9 +1,8 @@
 import React from 'react'
 
-import '../../../css/Three.css'
 
-import basesorting from '../../../assets/third/base-sorting.png'
-import codesorting1 from '../../../assets/third/code-sorting1.PNG'
+import basesorting from '../../../assets/img/third/base-sorting.png'
+import codesorting1 from '../../../assets/img/third/code-sorting1.PNG'
 
 const ThreeStart = () => {
   return(
