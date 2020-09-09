@@ -1,0 +1,29 @@
+
+.array-container {
+  padding: 1.7em 4em;
+}
+.array-bar {
+  width: 4px;
+  display: inline-block; /* arranges the array bars in horizontal way*/
+  margin: 0 2px; /*Top,Bottom -> 0px Left,Right -> 1px*/
+}
+
+.buttons{
+  align-items: center;
+  padding: 0em 4em;
+  button {
+    padding: .60em;
+    margin: 20px;
+    background-color: #47535E; 
+    border: none;
+    color: #EAF0F1;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    font: 15px "Century Gothic", Futura, sans-serif;
+    &:not(:last-child){
+      border-bottom: none;
+    }
+  }
+}

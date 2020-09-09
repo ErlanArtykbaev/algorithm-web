@@ -5,7 +5,7 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Home from './components/Home'
+import Home from './components/pages/Home'
 import Lists from './components/pages/Lists'
 import Queues from './components/pages/Queues'
 import Sort from './components/pages/Sort'
@@ -15,6 +15,8 @@ import Hash from './components/pages/Hash'
 import Set from './components/pages/Set'
 import Map from './components/pages/Map'
 import Graph from './components/pages/Graph'
+
+import './assets/scss/style.scss'
 
 function App() {
   return (
