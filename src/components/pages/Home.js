@@ -31,7 +31,7 @@ const Home = () => {
         </div>
         <div className="algorithm">
           <NavLink to="/pyramids">
-            5. Пирамиды.<br /> Пирамидальная сортировка.
+            5. Пирамиды. Пирамидальная сортировка.
           </NavLink>
         </div>
         <div className="algorithm">
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
         <div className="algorithm">
           <NavLink to="/graph">
-            8. Map.
+            9. Graph.
           </NavLink>
         </div>
       </div>

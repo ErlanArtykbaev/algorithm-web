@@ -1,29 +1,36 @@
 
 .array-container {
-  padding: 1.7em 4em;
+  margin: 0 auto;
 }
 .array-bar {
-  width: 4px;
+  width: 3px;
   display: inline-block; /* arranges the array bars in horizontal way*/
   margin: 0 2px; /*Top,Bottom -> 0px Left,Right -> 1px*/
 }
 
 .buttons{
-  align-items: center;
-  padding: 0em 4em;
+  width: 100%;
+  display: flex;
   button {
+    @include flexCenter();
+    margin: 5px 20px;
     padding: .60em;
-    margin: 20px;
     background-color: #47535E; 
     border: none;
     color: #EAF0F1;
-    text-align: center;
     text-decoration: none;
+    border-radius: 6px;
     cursor: pointer;
     outline: 0;
-    font: 15px "Century Gothic", Futura, sans-serif;
     &:not(:last-child){
       border-bottom: none;
     }
+  }
+}
+
+.sort{
+  display: flex;
+  .content{
+    flex: 0.8;
   }
 }
