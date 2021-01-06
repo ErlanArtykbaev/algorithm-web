@@ -2,8 +2,8 @@ import React from 'react'
 
 import Menu from '../layer/Menu'
 import Footer from '../layer/Footer'
-import ThreeStart from './Sort/ThreeStart'
-import ThreeSortingVisualizer from './Sort/ThreeSortingVisualizer'
+import ThreeStart from '../Sort/ThreeStart'
+import ThreeSortingVisualizer from '../Sort/ThreeSortingVisualizer'
 
 
 const Sort = () => {

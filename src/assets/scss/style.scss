@@ -3,6 +3,7 @@
 @import './templates';
 @import './sort';
 @import './menu';
+@import './footer';
 
 .home{
   box-sizing: border-box;
@@ -23,7 +24,7 @@
     flex-direction: column;
     justify-content: flex-end;
     .algorithm{
-      @include flexCenter;
+      @include flexCenter();
       background-color: #000;
       background: linear-gradient(to right,rgba(213,157,106, 0),	rgba(213,157,106, 1));
       width: 60%;
@@ -38,9 +39,4 @@
       }
     }
   }
-}
-
-.footer{
-  width: 100%;
-  background-color: green;
 }
