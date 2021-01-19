@@ -1,9 +1,9 @@
 @import './initalSetUp';
 @import './variables';
 @import './templates';
-@import './sort';
+@import 'pages/sort';
 @import 'layer/menu';
-@import './home';
+@import 'pages/home';
 @import 'layer/footer';
 @import 'layer/header';
 @import 'layer/container';

@@ -1,10 +1,13 @@
 import React  from 'react'
-import {NavLink} from 'react-router-dom'
+import MainHomeInfo from "../Home/MainHomeInfo";
+import ChooseWhatToLearn from "../Home/ChooseWhatToLearn";
 
 const Home = () => {
 
   return (
     <div className="home">
+      <MainHomeInfo />
+      <ChooseWhatToLearn />
       <br />
       <br />
       <br />
@@ -59,6 +62,7 @@ const Home = () => {
       {/*    </NavLink>*/}
       {/*  </div>*/}
       {/*</div>*/}
+
     </div>
   )
 }

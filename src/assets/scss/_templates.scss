@@ -6,6 +6,12 @@
 
 @mixin flexColumnFlexEnd {
   display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@mixin flexAlCentSpaceBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

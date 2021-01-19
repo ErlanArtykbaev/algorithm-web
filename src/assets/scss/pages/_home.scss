@@ -1,0 +1,37 @@
+@import "./../templates";
+.home{
+  .main-home-info{
+    @include flexAlCentSpaceBetween;
+    margin-top: 10px;
+    &-text{
+      max-width: 50%;
+      h1{
+        color: #2DAD67;
+      }
+      p{
+        color: #68698F;
+        font-size: 18px;
+      }
+      .home-main-btn{
+        border: 2px solid #2DAD67;
+        padding: 10px 24px;
+        width: max-content;
+        color: #2DAD67;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-weight: bold;
+        &:hover{
+          cursor: pointer;
+          color: white;
+          background-color: #2DAD67;
+        }
+      }
+    }
+    &-photo{
+      width: 50%;
+      .main-img{
+        width: 100%;
+      }
+    }
+  }
+}
