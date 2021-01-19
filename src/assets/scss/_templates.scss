@@ -3,3 +3,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin flexColumnFlexEnd {
+  display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}

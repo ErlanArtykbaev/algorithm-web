@@ -1,7 +1,7 @@
 import React from 'react'
 
-import basesorting from '../../assets/img/third/base-sorting.png'
-import codesorting1 from '../../assets/img/third/code-sorting1.PNG'
+import baseSorting from '../../assets/img/third/base-sorting.png'
+import codeSorting1 from '../../assets/img/third/code-sorting1.PNG'
 
 const ThreeStart = () => {
   return(
@@ -10,13 +10,13 @@ const ThreeStart = () => {
         <p>
           Сортировка элементов — одна из категорий алгоритмов, к которым разработчик должен привыкнуть.
         </p>
-        <img alt="base sorting"  src={basesorting} />
+        <img alt="base sorting"  src={baseSorting} />
         <p>Базовые алгоритмы, самые простые, реализованы при помощи цикла for.</p>
         <p>
           Естественно, чтобы отсортировать коллекцию элементов,например, массив, нужно по этой коллекции как-то пройти. Например:
         </p>
         <div>
-          <img alt="code" src={codesorting1} />
+          <img alt="code" src={codeSorting1} />
         </div>
         <div>
           Что можно сказать об этом участке кода? 

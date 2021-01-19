@@ -2,41 +2,8 @@
 @import './variables';
 @import './templates';
 @import './sort';
-@import './menu';
-@import './footer';
-
-.home{
-  box-sizing: border-box;
-  background-image: url('../img/home/home-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
-  a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.4s;
-  }
-  .pages{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    .algorithm{
-      @include flexCenter();
-      background-color: #000;
-      background: linear-gradient(to right,rgba(213,157,106, 0),	rgba(213,157,106, 1));
-      width: 60%;
-      height: 100px;
-      border-radius: 20px;
-      margin: 20px;
-      margin-left: auto;
-      transition: 0.4s;
-      &:hover{
-        background-color: rgb(213, 157, 106);
-        color: #242424;
-      }
-    }
-  }
-}
+@import 'layer/menu';
+@import './home';
+@import 'layer/footer';
+@import 'layer/header';
+@import 'layer/container';

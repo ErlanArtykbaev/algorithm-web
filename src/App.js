@@ -17,43 +17,28 @@ import Map from './components/pages/Map'
 import Graph from './components/pages/Graph'
 
 import './assets/scss/style.scss'
+import Header from "./components/layer/Header";
+import Footer from "./components/layer/Footer";
+import Container from "./components/layer/Container";
 
 function App() {
   return (
     <div>
       <Router>
-          <Switch>
-            <Route path='/' exact>
-              <Home />
-            </Route>
-            <Route path='/lists'>
-              <Lists />
-            </Route>
-            <Route path='/stacks-queues'>
-              <Queues />
-            </Route>
-            <Route path='/sort'>
-              <Sort />
-            </Route>
-            <Route path='/tree'>
-              <Tree />
-            </Route>
-            <Route path='/pyramids'>
-              <Pyramids />
-            </Route>
-            <Route path='/hash'>
-              <Hash />
-            </Route>
-            <Route path='/set'>
-              <Set />
-            </Route>
-            <Route path='/map'>
-              <Map />
-            </Route>
-            <Route path='/graph'>
-              <Graph />
-            </Route>
-          </Switch>
+        <Header />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/lists' component={Lists} />
+          <Route path='/stacks-queues' component={Queues} />
+          <Route path='/sort' component={Sort} />
+          <Route path='/tree' component={Tree} />
+          <Route path='/pyramids' component={Pyramids} />
+          <Route path='/hash' component={Hash} />
+          <Route path='/set' component={Set} />
+          <Route path='/map' component={Map} />
+          <Route path='/graph' component={Graph} />
+        </Switch>
+        <Footer />
       </Router>
     </div>
   )
