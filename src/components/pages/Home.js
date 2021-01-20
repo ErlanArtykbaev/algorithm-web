@@ -1,20 +1,16 @@
 import React  from 'react'
 import MainHomeInfo from "../Home/MainHomeInfo";
 import ChooseWhatToLearn from "../Home/ChooseWhatToLearn";
+import Container from "../layer/Container";
 
 const Home = () => {
 
   return (
     <div className="home">
-      <MainHomeInfo />
-      <ChooseWhatToLearn />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Container>
+        <MainHomeInfo />
+        <ChooseWhatToLearn />
+      </Container>
       {/*<div className="pages">*/}
       {/*  <div className="algorithm">*/}
       {/*    <NavLink to="/lists">*/}

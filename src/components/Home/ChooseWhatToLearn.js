@@ -1,9 +1,42 @@
 import React from 'react'
 
+import ChooseItem from "./ChooseItem"
+
+import algoImg from '../../assets/img/home/algo.svg'
+import {NavLink} from "react-router-dom";
+
 const ChooseWhatToLearn = () => {
   return(
-    <div>
-      choose what to learn
+    <div className='choose-what-to-lrn'>
+      <div className='choose-what-to-lrn-text'>
+        <h3>Choose what to learn</h3>
+        <p>Start learning popular algorithms</p>
+      </div>
+      <ChooseItem
+        img={algoImg}
+        title='Binary Tree'
+        url='/binary-tree'
+      />
+      <ChooseItem
+        img={algoImg}
+        title='Binary Tree'
+        url='/binary-tree'
+      />
+      <ChooseItem
+        img={algoImg}
+        title='Binary Tree'
+        url='/binary-tree'
+      />
+      <ChooseItem
+        img={algoImg}
+        title='Binary Tree'
+        url='/binary-tree'
+      />
+      <NavLink to='/more'>
+        <div className='choose-what-to-lrn-more'>
+          <div className='more-text'>Learn More -></div>
+        </div>
+      </NavLink>
     </div>
   )
 }
