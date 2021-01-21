@@ -8,7 +8,7 @@ const ChooseItem = (props) => {
         <img src={props.img} alt='algo' />
       </div>
       <h3 className='choose-item-title'>{props.title}</h3>
-      <NavLink className='choose-item-url' to={props.url}>Learn -></NavLink>
+      <NavLink className='choose-item-url' to={props.url}>Learn ></NavLink>
     </div>
   )
 }

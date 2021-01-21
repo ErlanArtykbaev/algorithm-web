@@ -34,7 +34,7 @@ const ChooseWhatToLearn = () => {
       />
       <NavLink to='/more'>
         <div className='choose-what-to-lrn-more'>
-          <div className='more-text'>Learn More -></div>
+          <div className='more-text'>Learn More ></div>
         </div>
       </NavLink>
     </div>
