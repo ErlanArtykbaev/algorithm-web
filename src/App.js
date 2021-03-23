@@ -19,7 +19,7 @@ import Graph from './components/pages/Graph'
 import './assets/scss/style.scss'
 import Header from "./components/layer/Header";
 import Footer from "./components/layer/Footer";
-import Container from "./components/layer/Container";
+import TemplateForLectures from "./components/layer/TemplateForLectures";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Header />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/lectures' component={TemplateForLectures} />
           <Route path='/lists' component={Lists} />
           <Route path='/stacks-queues' component={Queues} />
           <Route path='/sort' component={Sort} />

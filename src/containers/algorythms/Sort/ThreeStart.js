@@ -1,7 +1,7 @@
 import React from 'react'
 
-import baseSorting from '../../assets/img/third/base-sorting.png'
-import codeSorting1 from '../../assets/img/third/code-sorting1.PNG'
+import baseSorting from '../../../assets/img/third/base-sorting.png'
+import codeSorting1 from '../../../assets/img/third/code-sorting1.PNG'
 
 const ThreeStart = () => {
   return(
