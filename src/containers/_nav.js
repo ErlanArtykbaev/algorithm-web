@@ -57,12 +57,12 @@ export const NavItems = [
     items: [
       {
         id: 0,
-        to: "/lecture/sort",
+        to: "/lectures/sort",
         name: "Что такое сортировка",
       },
       {
         id: 1,
-        to: "/lecture/sort",
+        to: "/lectures/sort",
         name: "Визуализация",
       },
     ],
