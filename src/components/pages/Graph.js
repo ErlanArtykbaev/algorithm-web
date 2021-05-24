@@ -2,7 +2,7 @@ import React from 'react'
 
 const Graph = () => {
   return(
-    <div>
+    <div className='graph-page'>
       graph
     </div>
   )

@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom'
 
+
 import Home from './components/pages/Home'
 
 import './assets/scss/style.scss'

@@ -1,19 +1,19 @@
 @import "./../templates";
 
-.home{
-  .main-home-info{
+.home {
+  .main-home-info {
     @include flexAlCentSpaceBetween;
     margin-top: 10px;
-    &-text{
+    &-text {
       max-width: 50%;
-      h1{
+      h1 {
         color: $main-green;
       }
-      p{
-        color: #68698F;
+      p {
+        color: #68698f;
         font-size: 18px;
       }
-      .home-main-btn{
+      .home-main-btn {
         border: 2px solid $main-green;
         padding: 10px 24px;
         width: max-content;
@@ -21,66 +21,89 @@
         box-sizing: border-box;
         font-size: 18px;
         font-weight: bold;
-        &:hover{
+        border-radius: 8px;
+        transition: 0.4s;
+        &:hover {
           cursor: pointer;
           color: white;
           background-color: $main-green;
         }
       }
     }
-    &-photo{
+    &-photo {
       width: 50%;
-      .main-img{
+      .main-img {
         width: 100%;
       }
     }
   }
-  .choose-what-to-lrn{
+  .choose-what-to-lrn {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    &-text{
+    padding: 80px 0;
+    &-text {
       max-width: 160px;
-      h3{
+      h3 {
         color: $main-green;
       }
-      p{
-        color: #68698F;
+      p {
+        color: #68698f;
       }
     }
-    &-more{
+    &-more {
       @include flexCenter;
       padding: 10px;
       width: 160px;
       height: 100%;
       border-radius: 4px;
       border: 0.3px solid $main-green;
+      box-shadow: 1px 0 15px -8px rgba(0, 0, 0, 0.4);
       box-sizing: border-box;
+      .more-text {
+        @include flexCenter;
+      }
     }
-    .choose-item{
+    .choose-item {
       padding: 10px;
       width: 160px;
-      border-radius: 4px;
+      min-height: 200px;
+      border-radius: 6px;
       border: 0.3px solid $main-green;
       box-sizing: border-box;
-      &-title{
+      box-shadow: 1px 0 15px -8px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      &-title {
         color: $main-green;
+        margin: 0;
       }
-      .bkg-img-clr{
-        margin-bottom: 20px;
-          img{
+      .bkg-img-clr {
+        img {
           width: 80px;
         }
       }
-      a{
-        text-decoration: none;
-        font-weight: bold;
-        color: #68698F;
+      &-url {
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0;
+        }
       }
     }
-    a{
-      text-decoration: none;
-      color: #68698F;
+  }
+  .online-emulation {
+    display: flex;
+    padding: 80px 0;
+    .img-wrapper {
+      width: 50%;
+      .compiler {
+        width: 100%;
+      }
+    }
+    .info {
+      width: 50%;
     }
   }
 }
