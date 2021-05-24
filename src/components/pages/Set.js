@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react"
 
-const Five = () => {
-  return(
+const Set = () => {
+  return (
     <div>
-      <div className="Five-main">
-        hello first
-      </div>
+      <div className='Five-main'>hello first</div>
     </div>
   )
 }
 
-export default Five
+export default Set
