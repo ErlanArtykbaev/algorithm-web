@@ -9,6 +9,7 @@ import Footer from "./components/layer/Footer"
 import DoublyList from "./components/pages/Lists/DoubleList"
 import SinglyList from "./components/pages/Lists/SinglyList"
 import WhatIsList from "./components/pages/Lists/WhatIsList"
+import Queues from "./components/pages/Queues/Queues"
 import WhatIsStack from "./components/pages/Queues/WhatIsStack"
 import Sider from "./containers/Sidebar"
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/lists/doubly' component={DoublyList} />
           <Route path='/lists/visaul' component={SinglyList} />
           <Route path='/queues/stecks' component={WhatIsStack} />
+          <Route path='/queues/queues' component={Queues} />
           <Route path='/queues/priority' component={SinglyList} />
           <Route path='/queues/visualization' component={SinglyList} />
           <Route path='/o/what-is-o' component={SinglyList} />
