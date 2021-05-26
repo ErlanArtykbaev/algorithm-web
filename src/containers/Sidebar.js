@@ -3,9 +3,15 @@ import "antd/dist/antd.css"
 
 import { Menu } from "antd"
 import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
+  DatabaseOutlined,
+  PartitionOutlined,
+  BarsOutlined,
+  DashboardOutlined,
+  CaretUpOutlined,
+  ForkOutlined,
+  ReadOutlined,
+  NodeExpandOutlined,
+  RadarChartOutlined,
 } from "@ant-design/icons"
 // import { NavItems } from "./_nav"
 import { NavLink } from "react-router-dom"
@@ -24,7 +30,7 @@ const Sider = () => {
       defaultSelectedKeys={["1"]}
       defaultOpenKeys={["lists"]}
       mode='inline'>
-      <SubMenu key='lists' icon={<MailOutlined />} title='Списки'>
+      <SubMenu key='lists' icon={<BarsOutlined />} title='Списки'>
         <Menu.Item key='1'>
           <NavLink to='/lists/what-is-list' className='nav-link'>
             Что такое списки
@@ -46,7 +52,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='queues' icon={<MailOutlined />} title='Стеки'>
+      <SubMenu key='queues' icon={<DatabaseOutlined />} title='Стеки'>
         <Menu.Item key='5'>
           <NavLink to='/queues/stecks' className='nav-link'>
             Стеки
@@ -68,7 +74,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='o' icon={<MailOutlined />} title='O большое'>
+      <SubMenu key='o' icon={<DashboardOutlined />} title='O большое'>
         <Menu.Item key='9'>
           <NavLink to='/o/what-is-o' className='nav-link'>
             Что такое О большое
@@ -82,7 +88,7 @@ const Sider = () => {
       </SubMenu>
       <SubMenu
         key='binary-tree'
-        icon={<MailOutlined />}
+        icon={<PartitionOutlined />}
         title='Бинарное дерево'>
         <Menu.Item key='11'>
           <NavLink to='/binary/what-is-tree' className='nav-link'>
@@ -120,7 +126,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='pyramids' icon={<MailOutlined />} title='Пирамиды'>
+      <SubMenu key='pyramids' icon={<CaretUpOutlined />} title='Пирамиды'>
         <Menu.Item key='18'>
           <NavLink to='/pyramids/what-is-pyramdis' className='nav-link'>
             Что такое пирамида
@@ -137,7 +143,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='hash' icon={<MailOutlined />} title='Хэш - таблицы'>
+      <SubMenu key='hash' icon={<ForkOutlined />} title='Хэш - таблицы'>
         <Menu.Item key='21'>
           <NavLink to='/hash/what-is-hash' className='nav-link'>
             Что такое хэш таблицы
@@ -149,7 +155,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='set' icon={<MailOutlined />} title='Set'>
+      <SubMenu key='set' icon={<ReadOutlined />} title='Set'>
         <Menu.Item key='23'>
           <NavLink to='/set/what-is-set' className='nav-link'>
             Что такое set
@@ -161,7 +167,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='map' icon={<MailOutlined />} title='Map'>
+      <SubMenu key='map' icon={<NodeExpandOutlined />} title='Map'>
         <Menu.Item key='25'>
           <NavLink to='/map/what-is-map' className='nav-link'>
             Что такое map
@@ -173,7 +179,7 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='graph' icon={<MailOutlined />} title='Графы'>
+      <SubMenu key='graph' icon={<RadarChartOutlined />} title='Графы'>
         <Menu.Item key='27'>
           <NavLink to='/graph/what-is-graph' className='nav-link'>
             Что такое Графы

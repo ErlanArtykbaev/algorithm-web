@@ -11,3 +11,8 @@
 @import "layer/container";
 @import "layer/sidebar";
 @import "layer/template";
+@import "layer/imageWrapper";
+
+.app {
+  display: flex;
+}

@@ -1,0 +1,20 @@
+.image-wrapper {
+  width: 80%;
+  border: 1px solid $image-border;
+  border-radius: 5px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 80%;
+  }
+  .image-bottom {
+    padding: 16px 12px;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f5fd;
+    color: rgba(37, 38, 94, 0.7);
+    font-size: 18px;
+  }
+}
