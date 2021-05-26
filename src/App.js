@@ -12,6 +12,7 @@ import WhatIsList from "./components/pages/Lists/WhatIsList"
 import PriorityQueue from "./components/pages/Queues/PriorityQueue"
 import Queues from "./components/pages/Queues/Queues"
 import WhatIsStack from "./components/pages/Queues/WhatIsStack"
+import WhatIsBinaryTree from "./components/pages/Tree/WhatIsBinaryTree"
 import Sider from "./containers/Sidebar"
 
 function App() {
@@ -32,8 +33,7 @@ function App() {
           <Route path='/queues/visualization' component={SinglyList} />
           <Route path='/o/what-is-o' component={SinglyList} />
           <Route path='/o/example' component={SinglyList} />
-          <Route path='/binary/what-is-tree' component={SinglyList} />
-          <Route path='/binary/binary-tree' component={SinglyList} />
+          <Route path='/binary/what-is-tree' component={WhatIsBinaryTree} />
           <Route path='/binary/add-element' component={SinglyList} />
           <Route path='/binary/delete-element' component={SinglyList} />
           <Route path='/binary/obhod' component={SinglyList} />

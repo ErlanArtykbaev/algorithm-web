@@ -95,11 +95,6 @@ const Sider = () => {
             What is binary tree
           </NavLink>
         </Menu.Item>
-        <Menu.Item key='12'>
-          <NavLink to='/binary/bianry-tree' className='nav-link'>
-            Binary Tree
-          </NavLink>
-        </Menu.Item>
         <Menu.Item key='13'>
           <NavLink to='/binary/add-element' className='nav-link'>
             Adding element
