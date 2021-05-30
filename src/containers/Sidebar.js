@@ -105,16 +105,6 @@ const Sider = () => {
             Deleting element
           </NavLink>
         </Menu.Item>
-        <Menu.Item key='15'>
-          <NavLink to='/binary/obhod' className='nav-link'>
-            Bypass
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key='16'>
-          <NavLink to='/binary/search' className='nav-link'>
-            Search node
-          </NavLink>
-        </Menu.Item>
         <Menu.Item key='17'>
           <NavLink to='/binary/vizual' className='nav-link'>
             Visualization

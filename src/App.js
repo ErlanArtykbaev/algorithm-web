@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
 import Footer from "./components/layer/Footer"
+import WhatisHashTable from "./components/pages/Hash/WhatIsHashTable"
 import DoublyList from "./components/pages/Lists/DoubleList"
 import SinglyList from "./components/pages/Lists/SinglyList"
 import WhatIsList from "./components/pages/Lists/WhatIsList"
@@ -38,13 +39,11 @@ function App() {
           <Route path='/binary/what-is-tree' component={WhatIsBinaryTree} />
           <Route path='/binary/add-element' component={InsertTree} />
           <Route path='/binary/delete-element' component={DeleteTree} />
-          <Route path='/binary/obhod' component={SinglyList} />
-          <Route path='/binary/search' component={SinglyList} />
           <Route path='/binary/vizual' component={SinglyList} />
           <Route path='/pyramids/what-is-pyramids' component={SinglyList} />
           <Route path='/pyramids/sort' component={SinglyList} />
           <Route path='/pyramids/vizual' component={SinglyList} />
-          <Route path='/hash/what-is-hash' component={SinglyList} />
+          <Route path='/hash/what-is-hash' component={WhatisHashTable} />
           <Route path='/hash/example' component={SinglyList} />
           <Route path='/set/what-is-set' component={SinglyList} />
           <Route path='/set/example' component={SinglyList} />
