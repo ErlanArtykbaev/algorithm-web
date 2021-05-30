@@ -140,30 +140,6 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key='set' icon={<ReadOutlined />} title='Set'>
-        <Menu.Item key='23'>
-          <NavLink to='/set/what-is-set' className='nav-link'>
-            Waht is set
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key='24'>
-          <NavLink to='/set/example' className='nav-link'>
-            Example
-          </NavLink>
-        </Menu.Item>
-      </SubMenu>
-      <SubMenu key='map' icon={<NodeExpandOutlined />} title='Map'>
-        <Menu.Item key='25'>
-          <NavLink to='/map/what-is-map' className='nav-link'>
-            What is map
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key='26'>
-          <NavLink to='/map/example' className='nav-link'>
-            Example
-          </NavLink>
-        </Menu.Item>
-      </SubMenu>
       <SubMenu key='graph' icon={<RadarChartOutlined />} title='Graphs'>
         <Menu.Item key='27'>
           <NavLink to='/graph/what-is-graph' className='nav-link'>

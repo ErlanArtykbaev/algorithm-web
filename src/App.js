@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
 import Footer from "./components/layer/Footer"
+import WhatIsGraph from "./components/pages/Graph/WhatIsGraph"
 import WhatisHashTable from "./components/pages/Hash/WhatIsHashTable"
 import DoublyList from "./components/pages/Lists/DoubleList"
 import SinglyList from "./components/pages/Lists/SinglyList"
@@ -45,11 +46,7 @@ function App() {
           <Route path='/pyramids/vizual' component={SinglyList} />
           <Route path='/hash/what-is-hash' component={WhatisHashTable} />
           <Route path='/hash/example' component={SinglyList} />
-          <Route path='/set/what-is-set' component={SinglyList} />
-          <Route path='/set/example' component={SinglyList} />
-          <Route path='/map/what-is-map' component={SinglyList} />
-          <Route path='/map/example' component={SinglyList} />
-          <Route path='/graph/what-is-graph' component={SinglyList} />
+          <Route path='/graph/what-is-graph' component={WhatIsGraph} />
           <Route path='/graph/algorithm' component={SinglyList} />
           <Route path='/graph/example' component={SinglyList} />
           <Route component={NotFound} />
