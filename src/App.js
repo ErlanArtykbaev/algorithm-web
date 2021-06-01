@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
 import Footer from "./components/layer/Footer"
+import GraphExample from "./components/pages/Graph/GraphExample"
 import WhatIsGraph from "./components/pages/Graph/WhatIsGraph"
 import WhatisHashTable from "./components/pages/Hash/WhatIsHashTable"
 import DoublyList from "./components/pages/Lists/DoubleList"
@@ -48,7 +49,7 @@ function App() {
           <Route path='/hash/example' component={SinglyList} />
           <Route path='/graph/what-is-graph' component={WhatIsGraph} />
           <Route path='/graph/algorithm' component={SinglyList} />
-          <Route path='/graph/example' component={SinglyList} />
+          <Route path='/graph/example' component={GraphExample} />
           <Route component={NotFound} />
         </Switch>
         {/* <Footer /> */}

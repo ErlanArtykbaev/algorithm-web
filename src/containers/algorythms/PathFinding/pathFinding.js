@@ -1,30 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { useImmerReducer } from 'use-immer'
-import styled from 'styled-components'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import StarIcon from '@material-ui/icons/Star'
-import StarOutlinedIcon from '@material-ui/icons/StarBorder'
-import _flatten from 'lodash/flatten'
-import _memoize from 'lodash/memoize'
-import PF from 'pathfinding'
-import matrixJs from 'matrix-js'
+import React from "react"
+import ReactDOM from "react-dom"
+import { useImmerReducer } from "use-immer"
+import styled from "styled-components"
+import { createMuiTheme } from "@material-ui/core/styles"
+import Paper from "@material-ui/core/Paper"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import StarIcon from "@material-ui/icons/Star"
+import StarOutlinedIcon from "@material-ui/icons/StarBorder"
+import _flatten from "lodash/flatten"
+import _memoize from "lodash/memoize"
+import PF from "pathfinding"
+import matrixJs from "matrix-js"
 
-import { Toolbar } from './toolbar'
+import { Toolbar } from "./pathFindingToolbar"
 
 const algorithms = [
-  'AStarFinder',
-  'BestFirstFinder',
-  'BreadthFirstFinder',
-  'DijkstraFinder',
-  'IDAStarFinder',
-  'JumpPointFinder',
-  'BiAStarFinder',
-  'BiBestFirstFinder',
-  'BiBreadthFirstFinder',
-  'BiDijkstraFinder',
+  "AStarFinder",
+  "BestFirstFinder",
+  "BreadthFirstFinder",
+  "DijkstraFinder",
+  "IDAStarFinder",
+  "JumpPointFinder",
+  "BiAStarFinder",
+  "BiBestFirstFinder",
+  "BiBreadthFirstFinder",
+  "BiDijkstraFinder",
 ]
 
 // A matrix of the game map. 1 for non-walkable; 0 for walkable
@@ -73,8 +73,8 @@ function getTilesFromMatrix({ matrix }) {
           inPath: false, // no path yet!
           isStart: false, // no starting tile yet!
           isEnd: false, // no ending tile yet!
-        })),
-      ),
+        }))
+      )
   )
 }
 
@@ -84,7 +84,7 @@ const getPathFinder = _memoize(
       allowDiagonal,
     })
   },
-  ({ algorithm, allowDiagonal }) => algorithm + allowDiagonal,
+  ({ algorithm, allowDiagonal }) => algorithm + allowDiagonal
 )
 
 function getPositionsAreEqual(a, b) {
@@ -110,17 +110,11 @@ function computeTiles({ start, end, algorithm, allowDiagonal, matrix }) {
   return tiles
 }
 
-const theme = createMuiTheme({
-  palette: {
-    type: 'dark',
-  },
-})
-
 const initialState = {
   start: null, // starting tile for pathfinding
   end: null, // ending tile
   pathSet: false,
-  algorithm: 'AStarFinder', // the pathfinding algorithm to use
+  algorithm: "AStarFinder", // the pathfinding algorithm to use
   allowDiagonal: true, // optionally allow diagonal paths
   matrix,
   editMode: false,
@@ -128,7 +122,7 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'tile clicked': {
+    case "tile clicked": {
       const { tile } = action
       if (state.editMode) {
         const matrixTile = (state.matrix[tile.y][tile.x] ^= 1)
@@ -153,7 +147,7 @@ function reducer(state, action) {
       return
     }
 
-    case 'mouse entered tile': {
+    case "mouse entered tile": {
       const { tile } = action
       if (
         !state.editMode &&
@@ -167,17 +161,17 @@ function reducer(state, action) {
       return
     }
 
-    case 'algorithm changed': {
+    case "algorithm changed": {
       state.algorithm = action.algorithm
       return
     }
 
-    case 'allow diagonal toggled': {
+    case "allow diagonal toggled": {
       state.allowDiagonal = !state.allowDiagonal
       return
     }
 
-    case 'edit mode toggled': {
+    case "edit mode toggled": {
       state.editMode = !state.editMode
       return
     }
@@ -192,39 +186,38 @@ function App() {
   const tiles = computeTiles(state)
 
   return (
-    <MuiThemeProvider theme={theme}>
+    <>
       <CssBaseline />
       <Toolbar
         algorithm={state.algorithm}
         algorithms={algorithms}
-        handleAlgorithmChange={e =>
-          dispatch({ type: 'algorithm changed', algorithm: e.target.value })
+        handleAlgorithmChange={(e) =>
+          dispatch({ type: "algorithm changed", algorithm: e.target.value })
         }
         allowDiagonal={state.allowDiagonal}
         handleAllowDiagonalChange={() =>
-          dispatch({ type: 'allow diagonal toggled' })
+          dispatch({ type: "allow diagonal toggled" })
         }
-        handleEditModeChange={() => dispatch({ type: 'edit mode toggled' })}
+        handleEditModeChange={() => dispatch({ type: "edit mode toggled" })}
       />
       <GameContainer>
-        <div style={{ flex: 1 }} />
+        {/* <div style={{ flex: 1 }} /> */}
         <GridContainer>
           {tiles.map((tile, i) => (
             <Tile
               key={i}
               tile={tile}
-              onClick={() => dispatch({ type: 'tile clicked', tile })}
+              onClick={() => dispatch({ type: "tile clicked", tile })}
               onMouseEnter={() =>
-                dispatch({ type: 'mouse entered tile', tile })
+                dispatch({ type: "mouse entered tile", tile })
               }
-              editMode={state.editMode}
-            >
+              editMode={state.editMode}>
               <TileIcon tile={tile} pathSet={state.pathSet} />
             </Tile>
           ))}
         </GridContainer>
       </GameContainer>
-    </MuiThemeProvider>
+    </>
   )
 }
 
@@ -234,7 +227,6 @@ const GameContainer = styled.div`
 `
 
 const GridContainer = styled(Paper)`
-  background: linear-gradient(to bottom, #81699a, #4f2763);
   display: grid;
   grid-template-rows: repeat(8, 64px);
   grid-auto-flow: column;
@@ -244,17 +236,17 @@ const GridContainer = styled(Paper)`
 
 function getHoverColor({ editMode, tile }) {
   if (editMode) {
-    return tile.walkable ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0.6)'
+    return tile.walkable ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.6)"
   } else {
-    return tile.walkable ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.8)'
+    return tile.walkable ? "rgba(255,255,255,0.2)" : "#1890ff"
   }
 }
 
 const Tile = styled.div`
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  background-color: ${props =>
-    props.tile.walkable ? 'transparent' : 'rgba(0,0,0,0.8)'};
+  background-color: ${(props) =>
+    props.tile.walkable ? "transparent" : "#1890ff"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,13 +259,13 @@ const Tile = styled.div`
 
 function getIconColor(tile) {
   if (tile.isStart) {
-    return 'Chartreuse'
+    return "Chartreuse"
   } else if (tile.isEnd) {
-    return 'OrangeRed'
+    return "OrangeRed"
   } else if (tile.inPath) {
-    return 'CornflowerBlue'
+    return "CornflowerBlue"
   } else {
-    return 'AntiqueWhite'
+    return "AntiqueWhite"
   }
 }
 
@@ -281,9 +273,9 @@ function TileIcon({ tile, pathSet }) {
   if (tile.isStart || tile.inPath || tile.isEnd) {
     const color = getIconColor(tile)
     if (tile.isEnd && !pathSet) {
-      return <StarOutlinedIcon fontSize="large" style={{ color }} />
+      return <StarOutlinedIcon fontSize='large' style={{ color }} />
     } else {
-      return <StarIcon fontSize="large" style={{ color }} />
+      return <StarIcon fontSize='large' style={{ color }} />
     }
   }
   return null
