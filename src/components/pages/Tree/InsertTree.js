@@ -40,7 +40,11 @@ const InsertTree = () => {
       <p>
         The elements to be inserted are 8, 9, 10, 11, 15, 16, 17, 18, 20, 23.
       </p>
-      <ImageWrapper url={first} text='Inserting elements into a B-tree' />
+      <ImageWrapper
+        size='big'
+        url={first}
+        text='Inserting elements into a B-tree'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Algorithm for Inserting an Element</h3>
       <CodePreview

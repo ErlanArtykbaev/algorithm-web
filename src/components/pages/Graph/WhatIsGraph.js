@@ -25,7 +25,11 @@ const WhatIsGraph = () => {
         a photo, join a group, like a page, etc., a new edge is created for that
         relationship.
       </p>
-      <ImageWrapper url={first} text='Example of graph data structure' />
+      <ImageWrapper
+        size='md'
+        url={first}
+        text='Example of graph data structure'
+      />
       <p>
         All of facebook is then a collection of these nodes and edges. This is
         because facebook uses a graph data structure to store its data.
@@ -38,7 +42,7 @@ const WhatIsGraph = () => {
           (u,v)
         </li>
       </ul>
-      <ImageWrapper url={second} text='Vertices and edges' />
+      <ImageWrapper size='md' url={second} text='Vertices and edges' />
       <p>In the graph,</p>
       <CodePreview
         code={`
@@ -81,7 +85,7 @@ const WhatIsGraph = () => {
         it represents that there is an edge connecting vertex i and vertex j.
       </p>
       <p>The adjacency matrix for the graph we created above is</p>
-      <ImageWrapper url={third} text='Graph adjacency matrix' />
+      <ImageWrapper size='big' url={third} text='Graph adjacency matrix' />
       <p>
         Since it is an undirected graph, for edge (0,2), we also need to mark
         edge (2,0); making the adjacency matrix symmetric about the diagonal.
@@ -103,7 +107,11 @@ const WhatIsGraph = () => {
         The adjacency list for the graph we made in the first example is as
         follows:
       </p>
-      <ImageWrapper url={fourth} text='Adjacency list representation' />
+      <ImageWrapper
+        size='big'
+        url={fourth}
+        text='Adjacency list representation'
+      />
       <p>
         An adjacency list is efficient in terms of storage because we only need
         to store the values for the edges. For a graph with millions of

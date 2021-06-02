@@ -61,7 +61,11 @@ const DeleteTree = () => {
       <p>
         In the tree below, deleting 32 does not violate the above properties.{" "}
       </p>
-      <ImageWrapper url={first} text='Deleting a leaf key (32) from B-tree' />
+      <ImageWrapper
+        size='big'
+        url={first}
+        text='Deleting a leaf key (32) from B-tree'
+      />
       <p>
         2. The deletion of the key violates the property of the minimum number
         of keys a node should hold. In this case, we borrow a key from its
@@ -76,14 +80,14 @@ const DeleteTree = () => {
         In the tree below, deleting 31 results in the above condition. Let us
         borrow a key from the left sibling node.{" "}
       </p>
-      <ImageWrapper url={second} text='Deleting a leaf key (31)' />
+      <ImageWrapper size='big' url={second} text='Deleting a leaf key (31)' />
       <p>
         If both the immediate sibling nodes already have a minimum number of
         keys, then merge the node with either the left sibling node or the right
         sibling node. This merging is done through the parent node.
       </p>
       <p>Deleting 30 results in the above case.</p>
-      <ImageWrapper url={third} text='Deleting a leaf key (30)' />
+      <ImageWrapper size='big' url={third} text='Deleting a leaf key (30)' />
       <h3 className='sub-sub-title'>Case II</h3>
       <p>
         If the key to be deleted lies in the internal node, the following cases
@@ -93,7 +97,11 @@ const DeleteTree = () => {
         1. The internal node, which is deleted, is replaced by an inorder
         predecessor if the left child has more than the minimum number of keys.{" "}
       </p>
-      <ImageWrapper url={four} text='Deleting an internal node (33)' />
+      <ImageWrapper
+        size='big'
+        url={four}
+        text='Deleting an internal node (33)'
+      />
       <p>
         2. The internal node, which is deleted, is replaced by an inorder
         successor if the right child has more than the minimum number of keys.
@@ -103,7 +111,11 @@ const DeleteTree = () => {
         left and the right children.
       </p>
 
-      <ImageWrapper url={five} text='Deleting an internal node (30)' />
+      <ImageWrapper
+        size='big'
+        url={five}
+        text='Deleting an internal node (30)'
+      />
       <p>
         After merging if the parent node has less than the minimum number of
         keys then, look for the siblings as in Case I.
@@ -123,7 +135,11 @@ const DeleteTree = () => {
         along with the parent. Arrange the children accordingly (increasing
         order).
       </p>
-      <ImageWrapper url={six} text='Deleting an internal node (10)' />
+      <ImageWrapper
+        size='big'
+        url={six}
+        text='Deleting an internal node (10)'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
       <CodePreview

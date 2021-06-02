@@ -28,7 +28,7 @@ const SinglyList = () => {
         It is the most common. Each node has data and a pointer to the next
         node.
       </p>
-      <ImageWrapper url={first} text='Singly linked list' />
+      <ImageWrapper size='big' url={first} text='Singly linked list' />
       <p>Node is represented as:</p>
       <CodePreview
         code={`

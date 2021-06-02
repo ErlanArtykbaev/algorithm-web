@@ -20,7 +20,11 @@ const Queues = () => {
         item that goes in first is the item that comes out first. Representation
         of Queue in first in first out principle
       </p>
-      <ImageWrapper url={first} text='FIFO Representation of Queue' />
+      <ImageWrapper
+        size='big'
+        url={first}
+        text='FIFO Representation of Queue'
+      />
       <p>
         In the above image, since 1 was kept in the queue before 2, it is the
         first to be removed from the queue as well. It follows the{" "}
@@ -83,7 +87,11 @@ const Queues = () => {
         <li>increase the FRONT index by 1</li>
         <li>for the last element, reset the values of FRONT and REAR to -1</li>
       </ul>
-      <ImageWrapper url={second} text='Enqueue and Dequeue Operations' />
+      <ImageWrapper
+        size='big'
+        url={second}
+        text='Enqueue and Dequeue Operations'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Queue Implementation in Java</h3>
       <CodePreview

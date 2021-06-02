@@ -1,7 +1,6 @@
-import React, { useEffect } from "react"
+import React from "react"
 import ImageWrapper from "../../layer/ImageWrapper"
 import { Table } from "antd"
-import Prism from "prismjs"
 
 import first from "../../../assets/img/linked-list/linked-list-concept.webp"
 import second from "../../../assets/img/linked-list/linked-list-with-data.webp"
@@ -30,47 +29,6 @@ const WhatIsList = () => {
       best: "O(1)",
     },
   ]
-  const javaCode = `
-          // Linked list implementation in Java
-
-          class LinkedList {
-            // Creating a node
-            Node head;
-
-            static class Node {
-              int value;
-              Node next;
-
-              Node(int d) {
-                value = d;
-                next = null;
-              }
-            }
-
-            public static void main(String[] args) {
-              LinkedList linkedList = new LinkedList();
-
-              // Assign value values
-              linkedList.head = new Node(1);
-              Node second = new Node(2);
-              Node third = new Node(3);
-
-              // Connect nodess
-              linkedList.head.next = second;
-              second.next = third;
-
-              // printing node-value
-              while (linkedList.head != null) {
-                System.out.print(linkedList.head.value + " ");
-                linkedList.head = linkedList.head.next;
-              }
-            }
-          }
-  `.trim()
-
-  useEffect(() => {
-    setTimeout(() => Prism.highlightAll(), 0)
-  }, [])
 
   return (
     <div className='container'>
@@ -79,7 +37,11 @@ const WhatIsList = () => {
         A linked list data structure includes a series of connected nodes. Here,
         each node store the data and the address of the next node. For example,
       </p>
-      <ImageWrapper url={first} text={"Linked list Data Structure"} />
+      <ImageWrapper
+        size='big'
+        url={first}
+        text={"Linked list Data Structure"}
+      />
       <p>
         You have to start somewhere, so we give the address of the first node a
         special name called <span className='var'>HEAD</span>
@@ -158,7 +120,11 @@ const WhatIsList = () => {
         In just a few steps, we have created a simple linked list with three
         nodes.
       </p>
-      <ImageWrapper url={second} text='Связанный список. Представление.' />
+      <ImageWrapper
+        size='big'
+        url={second}
+        text='Связанный список. Представление.'
+      />
       <p>
         The power of a linked list comes from the ability to break the chain and
         rejoin it. E.g. if you wanted to put an element 4 between 1 and 2, the
@@ -196,7 +162,46 @@ const WhatIsList = () => {
       <div className='divider'></div>
       <h3 className='sub-title'>Linked List Implementation in Java Example</h3>
 
-      <CodePreview code={javaCode} language='java' />
+      <CodePreview
+        code={`
+          // Linked list implementation in Java
+
+          class LinkedList {
+            // Creating a node
+            Node head;
+
+            static class Node {
+              int value;
+              Node next;
+
+              Node(int d) {
+                value = d;
+                next = null;
+              }
+            }
+
+            public static void main(String[] args) {
+              LinkedList linkedList = new LinkedList();
+
+              // Assign value values
+              linkedList.head = new Node(1);
+              Node second = new Node(2);
+              Node third = new Node(3);
+
+              // Connect nodess
+              linkedList.head.next = second;
+              second.next = third;
+
+              // printing node-value
+              while (linkedList.head != null) {
+                System.out.print(linkedList.head.value + " ");
+                linkedList.head = linkedList.head.next;
+              }
+            }
+          }
+      `}
+        language='java'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Linked List Complexity</h3>
       <p>Time Complexity</p>

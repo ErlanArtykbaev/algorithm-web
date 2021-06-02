@@ -16,7 +16,7 @@ const WhatIsBinaryTree = () => {
         A binary tree is a tree data structure in which each parent node can
         have at most two children. For example,
       </p>
-      <ImageWrapper url={first} text='Binary Tree' />
+      <ImageWrapper size='sm' url={first} text='Binary Tree' />
       <div className='divider'></div>
       <h3 className='sub-title'>Types of Binary Tree</h3>
       <h3 className='sub-sub-title'>Full Binary Tree</h3>
@@ -24,14 +24,14 @@ const WhatIsBinaryTree = () => {
         A full Binary tree is a special type of binary tree in which every
         parent node/internal node has either two or no children.
       </p>
-      <ImageWrapper url={second} text='Full Binary Tree' />
+      <ImageWrapper size='sm' url={second} text='Full Binary Tree' />
       <h3 className='sub-sub-title'>Perfect Binary Tree</h3>
       <p>
         A perfect binary tree is a type of binary tree in which every internal
         node has exactly two child nodes and all the leaf nodes are at the same
         level.
       </p>
-      <ImageWrapper url={third} text='Perfect Binary Tree' />
+      <ImageWrapper size='sm' url={third} text='Perfect Binary Tree' />
       <h3 className='sub-sub-title'>Complete Binary Tree</h3>
       <p>
         A complete binary tree is just like a full binary tree, but with two
@@ -43,7 +43,7 @@ const WhatIsBinaryTree = () => {
         3. The last leaf element might not have a right sibling i.e. a complete
         binary tree doesn't have to be a full binary tree.
       </p>
-      <ImageWrapper url={fourth} text='Complete Binary Tree' />
+      <ImageWrapper size='sm' url={fourth} text='Complete Binary Tree' />
       <div className='divider'></div>
       <h3 className='sub-title'>Binary Tree Representation</h3>
       <p>
@@ -61,7 +61,7 @@ const WhatIsBinaryTree = () => {
         `}
         language='c'
       />
-      <ImageWrapper url={fifth} text='Binary Tree Representation' />
+      <ImageWrapper size='md' url={fifth} text='Binary Tree Representation' />
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
       <CodePreview

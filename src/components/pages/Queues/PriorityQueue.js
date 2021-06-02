@@ -55,7 +55,11 @@ const PriorityQueue = () => {
         element with the lowest value as the highest priority element. In other
         cases, we can set priorities according to our needs.
       </p>
-      <ImageWrapper url={first} text='Removing Highest Priority Element' />
+      <ImageWrapper
+        size='sm'
+        url={first}
+        text='Removing Highest Priority Element'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>
         Difference between Priority Queue and Normal Queue
@@ -106,11 +110,13 @@ const PriorityQueue = () => {
       <ul>
         <li>Insert the new element at the end of the tree.</li>
         <ImageWrapper
+          size='sm'
           url={second}
           text='Insert an element at the end of the queue'
         />
         <li>Heapify the tree. </li>
         <ImageWrapper
+          size='sm'
           url={third}
           text='Insert an element at the end of the queue'
         />
@@ -144,13 +150,21 @@ const PriorityQueue = () => {
 
       <ul>
         <li>Select the element to be deleted. </li>
-        <ImageWrapper url={fourth} text='Select the element to be deleted' />
+        <ImageWrapper
+          size='sm'
+          url={fourth}
+          text='Select the element to be deleted'
+        />
         <li>Swap it with the last element.</li>
-        <ImageWrapper url={fifth} text='Swap with the last leaf node element' />
+        <ImageWrapper
+          size='sm'
+          url={fifth}
+          text='Swap with the last leaf node element'
+        />
         <li>Remove the last element. </li>
-        <ImageWrapper url={six} text='Remove the last element leaf' />
+        <ImageWrapper size='sm' url={six} text='Remove the last element leaf' />
         <li>Heapify the tree.</li>
-        <ImageWrapper url={seven} text='Heapify the priority queue' />
+        <ImageWrapper size='sm' url={seven} text='Heapify the priority queue' />
       </ul>
       <div className='divider'></div>
       <h3 className='sub-title'>

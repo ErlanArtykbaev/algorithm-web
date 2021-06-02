@@ -7,7 +7,15 @@
   flex-direction: column;
   align-items: center;
   img {
-    width: 80%;
+    &.md {
+      width: 63%;
+    }
+    &.big {
+      width: 80%;
+    }
+    &.sm {
+      width: 45%;
+    }
   }
   .image-bottom {
     padding: 16px 12px;

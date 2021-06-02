@@ -15,6 +15,7 @@ const WhatIsStack = () => {
         pile of plates kept on top of each other.
       </p>
       <ImageWrapper
+        size='sm'
         url={first}
         text='Stack representation similar to a pile of plate'
       />
@@ -36,7 +37,11 @@ const WhatIsStack = () => {
         <strong> push </strong> and removing an item is called{" "}
         <strong>pop</strong>.
       </p>
-      <ImageWrapper url={second} text='Stack Push and Pop Operations' />
+      <ImageWrapper
+        size='sm'
+        url={second}
+        text='Stack Push and Pop Operations'
+      />
       <p>
         In the above image, although item 2 was kept last, it was removed first
         - so it follows the <strong> Last In First Out(LIFO)</strong> principle.
@@ -91,7 +96,11 @@ const WhatIsStack = () => {
       </p>
       <p>5. Before pushing, we check if the stack is already full</p>
       <p>6. Before popping, we check if the stack is already empty</p>
-      <ImageWrapper url={third} text='Working of Stack Data Structure' />
+      <ImageWrapper
+        size='md'
+        url={third}
+        text='Working of Stack Data Structure'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Stack Implementation in Java</h3>
       <CodePreview

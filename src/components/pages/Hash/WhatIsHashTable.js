@@ -22,7 +22,7 @@ const WhatisHashTable = () => {
           <strong>Value - </strong> data that are associated with keys.
         </li>
       </ul>
-      <ImageWrapper url={first} text='Key and Value in Hash table' />
+      <ImageWrapper size='sm' url={first} text='Key and Value in Hash table' />
       <div className='divider'></div>
       <h3 className='sub-title'>Hashing (Hash Function)</h3>
       <p>
@@ -38,7 +38,7 @@ const WhatisHashTable = () => {
         Here, <span className='var'>h(k)</span> will give us a new index to
         store the element linked with <span className='var'>k</span>.
       </p>
-      <ImageWrapper url={second} text='Hash table Representation' />
+      <ImageWrapper size='big' url={second} text='Hash table Representation' />
       <div className='divider'></div>
       <h3 className='sub-title'>Hash Collision</h3>
       <p>
@@ -66,7 +66,11 @@ const WhatisHashTable = () => {
         present, <span className='var'>j</span> contains{" "}
         <span className='var'>NIL</span>.
       </p>
-      <ImageWrapper url={third} text='Collision Resolution using chaining' />
+      <ImageWrapper
+        size='big'
+        url={third}
+        text='Collision Resolution using chaining'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>2. Open Addressing</h3>
       <p>

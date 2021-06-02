@@ -12,7 +12,7 @@ const DoublyList = () => {
         We add a pointer to the previous node in a doubly-linked list. Thus, we
         can go in either direction: forward or backward.
       </p>
-      <ImageWrapper url={first} text='Doubly linked list' />
+      <ImageWrapper size='big' url={first} text='Doubly linked list' />
       <p>A node is represented as</p>
       <CodePreview
         code={`
