@@ -6,6 +6,7 @@ import second from "../../../assets/img/tree/full-binary-tree_0.webp"
 import third from "../../../assets/img/tree/perfect-binary-tree_0.webp"
 import fourth from "../../../assets/img/tree/complete-binary-tree_0.webp"
 import fifth from "../../../assets/img/tree/binary-tree-representation_0.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const WhatIsBinaryTree = () => {
   return (
@@ -49,21 +50,22 @@ const WhatIsBinaryTree = () => {
         A node of a binary tree is represented by a structure containing a data
         part and two pointers to other structures of the same type.
       </p>
-      <pre>
-        <code className='language-c'>{`
+      <CodePreview
+        code={`
         struct node
         {
          int data;
          struct node *left;
          struct node *right;
         };
-        `}</code>
-      </pre>
+        `}
+        language='c'
+      />
       <ImageWrapper url={fifth} text='Binary Tree Representation' />
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         // Binary Tree in Java
 
         // Node creation
@@ -131,8 +133,9 @@ const WhatIsBinaryTree = () => {
           tree.traversePostOrder(tree.root);
           }
         }
-        `}</code>
-      </pre>
+        `}
+        language='java'
+      />
     </div>
   )
 }

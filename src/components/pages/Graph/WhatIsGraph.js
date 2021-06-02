@@ -5,6 +5,7 @@ import first from "../../../assets/img/graph/facebook-graph.webp"
 import second from "../../../assets/img/graph/graph-vertices-edges_0.webp"
 import third from "../../../assets/img/graph/adjacency-matrix_1.webp"
 import fourth from "../../../assets/img/graph/adjacency-list.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const WhatIsGraph = () => {
   return (
@@ -39,13 +40,14 @@ const WhatIsGraph = () => {
       </ul>
       <ImageWrapper url={second} text='Vertices and edges' />
       <p>In the graph,</p>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         V = {0, 1, 2, 3}
         E = {(0,1), (0,2), (0,3), (1,2)}
         G = {V, E}
-        `}</code>
-      </pre>
+        `}
+        language='c'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Graph Terminology</h3>
       <ul>
@@ -60,7 +62,7 @@ const WhatIsGraph = () => {
           vertex 0 to vertex 2.
         </li>
         <li>
-          <string>Directed Graph</string>: A graph in which an edge (u,v)
+          <strong>Directed Graph</strong>: A graph in which an edge (u,v)
           doesn't necessarily mean that there is an edge (v, u) as well. The
           edges in such a graph are represented by arrows to show the direction
           of the edge.

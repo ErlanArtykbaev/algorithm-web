@@ -2,6 +2,7 @@ import React from "react"
 import ImageWrapper from "../../layer/ImageWrapper"
 
 import first from "../../../assets/img/linked-list/doubly-linked-list-concept.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const DoublyList = () => {
   return (
@@ -13,22 +14,19 @@ const DoublyList = () => {
       </p>
       <ImageWrapper url={first} text='Doubly linked list' />
       <p>A node is represented as</p>
-      <pre>
-        <code className='language-java'>
-          {`
+      <CodePreview
+        code={`
             struct node {
               int data;
               struct node *next;
               struct node *prev;
             }
-          `}
-        </code>
-      </pre>
+        `}
+        language='c'
+      />
       <p>A three-member doubly linked list can be created as</p>
-
-      <pre>
-        <code className='language-java'>
-          {`
+      <CodePreview
+        code={`
           /* Initialize nodes */
           struct node *head;
           struct node *one = NULL;
@@ -57,9 +55,10 @@ const DoublyList = () => {
           
           /* Save address of first node in head */
           head = one;
-          `}
-        </code>
-      </pre>
+        `}
+        language='c'
+      />
+
       <div className='divider'></div>
     </div>
   )

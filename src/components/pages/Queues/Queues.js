@@ -4,6 +4,7 @@ import ImageWrapper from "../../layer/ImageWrapper"
 
 import first from "../../../assets/img/queues/queue.webp"
 import second from "../../../assets/img/queues/Big-queue.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const Queues = () => {
   return (
@@ -27,7 +28,7 @@ const Queues = () => {
       </p>
       <p>
         In programming terms, putting items in the queue is called{" "}
-        <string>enqueue</string>, and removing items from the queue is called{" "}
+        <strong>enqueue</strong>, and removing items from the queue is called{" "}
         <strong>dequeue</strong>.
       </p>
       <p>
@@ -85,8 +86,8 @@ const Queues = () => {
       <ImageWrapper url={second} text='Enqueue and Dequeue Operations' />
       <div className='divider'></div>
       <h3 className='sub-title'>Queue Implementation in Java</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         // Queue implementation in Java
 
         public class Queue {
@@ -185,8 +186,8 @@ const Queues = () => {
         
           }
         }
-        `}</code>
-      </pre>
+      `}
+      />
     </div>
   )
 }

@@ -5,8 +5,8 @@ import Prism from "prismjs"
 
 import first from "../../../assets/img/linked-list/linked-list-concept.webp"
 import second from "../../../assets/img/linked-list/linked-list-with-data.webp"
+import CodePreview from "../../layer/CodePreview"
 
-import "./prism.css"
 const { Column } = Table
 
 const WhatIsList = () => {
@@ -107,17 +107,16 @@ const WhatIsList = () => {
       <p>
         We wrap both the data item and the next node reference in a struct as:
       </p>
-      <pre>
-        <code className='language-java'>
-          {`
-            struct node
-            {
-              int data;
-              struct node *next;
-            }
-          `}
-        </code>
-      </pre>
+      <CodePreview
+        code={`
+        struct node
+        {
+          int data;
+          struct node *next;
+        }
+      `}
+        language='c'
+      />
       <p>
         Understanding the structure of a linked list node is the key to having a
         grasp on it.
@@ -127,9 +126,8 @@ const WhatIsList = () => {
         Let us create a simple Linked List with three items to understand how
         this works.
       </p>
-      <pre>
-        <code className='language-java'>
-          {`
+      <CodePreview
+        code={`
         /* Initialize nodes */
         struct node *head;
         struct node *one = NULL;
@@ -154,8 +152,8 @@ const WhatIsList = () => {
         /* Save address of first node in head */
         head = one;
       `}
-        </code>
-      </pre>
+        language='c'
+      />
       <p>
         In just a few steps, we have created a simple linked list with three
         nodes.
@@ -197,9 +195,8 @@ const WhatIsList = () => {
       </p>
       <div className='divider'></div>
       <h3 className='sub-title'>Linked List Implementation in Java Example</h3>
-      <pre className='line-numbers'>
-        <code className='language-java'>{javaCode}</code>
-      </pre>
+
+      <CodePreview code={javaCode} language='java' />
       <div className='divider'></div>
       <h3 className='sub-title'>Linked List Complexity</h3>
       <p>Time Complexity</p>

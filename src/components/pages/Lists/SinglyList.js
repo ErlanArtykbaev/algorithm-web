@@ -1,6 +1,7 @@
 import React from "react"
 
 import first from "../../../assets/img/linked-list/linked-list-concept.webp"
+import CodePreview from "../../layer/CodePreview"
 import ImageWrapper from "../../layer/ImageWrapper"
 
 const SinglyList = () => {
@@ -29,18 +30,19 @@ const SinglyList = () => {
       </p>
       <ImageWrapper url={first} text='Singly linked list' />
       <p>Node is represented as:</p>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
           struct node {
             int data;
             struct node *next;
           }
-        `}</code>
-      </pre>
+      `}
+        language='c'
+      />
       <p>A three-member singly linked list can be created as:</p>
 
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         /* Initialize nodes */
         struct node *head;
         struct node *one = NULL;
@@ -64,8 +66,9 @@ const SinglyList = () => {
         
         /* Save address of first node in head */
         head = one;
-        `}</code>
-      </pre>
+      `}
+        language='c'
+      />
     </div>
   )
 }

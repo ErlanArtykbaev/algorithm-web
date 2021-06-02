@@ -2,6 +2,7 @@ import React from "react"
 import ImageWrapper from "../../layer/ImageWrapper"
 
 import first from "../../../assets/img/tree/insertion.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const InsertTree = () => {
   return (
@@ -42,8 +43,8 @@ const InsertTree = () => {
       <ImageWrapper url={first} text='Inserting elements into a B-tree' />
       <div className='divider'></div>
       <h3 className='sub-title'>Algorithm for Inserting an Element</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         BreeInsertion(T, k)
         r  root[T]
         if n[r] = 2t - 1
@@ -89,12 +90,13 @@ const InsertTree = () => {
             keyj+1[x] = keyj[x]
         keyi[x] = keyt[y]
         n[x] = n[x] + 1
-        `}</code>
-      </pre>
+        `}
+        language='c'
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         // Inserting a key on a B-tree in Java 
 
         public class BTree {
@@ -227,8 +229,9 @@ const InsertTree = () => {
             b.display();
           }
         }
-        `}</code>
-      </pre>
+        `}
+        language='java'
+      />
     </div>
   )
 }

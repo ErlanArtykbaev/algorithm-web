@@ -4,6 +4,7 @@ import ImageWrapper from "../../layer/ImageWrapper"
 import first from "../../../assets/img/hash/Hash-0.webp"
 import second from "../../../assets/img/hash/Hash-2_0.webp"
 import third from "../../../assets/img/hash/Hash-3_1.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const WhatisHashTable = () => {
   return (
@@ -150,14 +151,15 @@ const WhatisHashTable = () => {
         <span className='var'>10, 100, 1000, ...</span>. When we find k mod m,
         we will always get the lower order p-bits.
       </p>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         if m = 22, k = 17, then h(k) = 17 mod 22 = 10001 mod 100 = 01
         if m = 23, k = 17, then h(k) = 17 mod 22 = 10001 mod 100 = 001
         if m = 24, k = 17, then h(k) = 17 mod 22 = 10001 mod 100 = 0001
         if m = 2p, then h(k) = p lower bits of m
-        `}</code>
-      </pre>
+        `}
+        language='c'
+      />
       <h3 className='sub-sub-title'>2. Multiplication Method</h3>
       <p>
         <span className='var'>h(k) = ⌊m(kA mod 1)⌋</span>
@@ -184,8 +186,8 @@ const WhatisHashTable = () => {
       </p>
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         // Java program to demonstrate working of HashTable 
 
         import java.util.*; 
@@ -206,8 +208,9 @@ const WhatisHashTable = () => {
           System.out.println(ht); 
           } 
         } 
-        `}</code>
-      </pre>
+        `}
+        language='java'
+      />
     </div>
   )
 }

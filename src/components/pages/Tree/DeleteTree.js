@@ -7,6 +7,7 @@ import third from "../../../assets/img/tree/delete-leaf-3.webp"
 import four from "../../../assets/img/tree/delete-internal-1.webp"
 import five from "../../../assets/img/tree/delete-internal-2.webp"
 import six from "../../../assets/img/tree/delete-internal_3.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const DeleteTree = () => {
   return (
@@ -125,8 +126,9 @@ const DeleteTree = () => {
       <ImageWrapper url={six} text='Deleting an internal node (10)' />
       <div className='divider'></div>
       <h3 className='sub-title'>Java Example</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        language='java'
+        code={`
         // Inserting a key on a B-tree in Java
 
         import java.util.Stack;
@@ -500,8 +502,8 @@ const DeleteTree = () => {
             b.Show();
           }
         }
-        `}</code>
-      </pre>
+      `}
+      />
       <div className='divider'></div>
       <h3 className='sub-title'>Deletion Complexity</h3>
       <p>Best case Time complexity: Θ(log n)</p>

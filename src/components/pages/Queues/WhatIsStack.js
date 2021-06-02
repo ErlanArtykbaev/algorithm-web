@@ -4,6 +4,7 @@ import ImageWrapper from "../../layer/ImageWrapper"
 import first from "../../../assets/img/queues/stack-of-plates_0.webp"
 import second from "../../../assets/img/queues/stack.webp"
 import third from "../../../assets/img/queues/stack-operations.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const WhatIsStack = () => {
   return (
@@ -93,8 +94,9 @@ const WhatIsStack = () => {
       <ImageWrapper url={third} text='Working of Stack Data Structure' />
       <div className='divider'></div>
       <h3 className='sub-title'>Stack Implementation in Java</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        language='java'
+        code={`
         // Stack implementation in Java
 
         class Stack {
@@ -165,14 +167,14 @@ const WhatIsStack = () => {
         
           }
         }
-        `}</code>
-        <div className='divider'></div>
-        <h3 className='sub-title'>Stack Time Complexity</h3>
-        <p>
-          For the array-based implementation of a stack, the push and pop
-          operations take constant time, i.e. <span className='var'>O(1)</span>.
-        </p>
-      </pre>
+      `}
+      />
+      <div className='divider'></div>
+      <h3 className='sub-title'>Stack Time Complexity</h3>
+      <p>
+        For the array-based implementation of a stack, the push and pop
+        operations take constant time, i.e. <span className='var'>O(1)</span>.
+      </p>
     </div>
   )
 }

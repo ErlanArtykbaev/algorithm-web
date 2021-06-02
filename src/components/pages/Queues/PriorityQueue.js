@@ -9,6 +9,7 @@ import fourth from "../../../assets/img/queues/delete-1_0.webp"
 import fifth from "../../../assets/img/queues/delete-2_0.webp"
 import six from "../../../assets/img/queues/delete-3.webp"
 import seven from "../../../assets/img/queues/delete-4.webp"
+import CodePreview from "../../layer/CodePreview"
 
 const { Column } = Table
 const PriorityQueue = () => {
@@ -174,8 +175,8 @@ const PriorityQueue = () => {
       </p>
       <div className='divider'></div>
       <h3 className='sub-title'>Priority Queue Implementation in Java</h3>
-      <pre>
-        <code className='language-java'>{`
+      <CodePreview
+        code={`
         // Priority Queue implementation in Java
 
         import java.util.ArrayList;
@@ -264,8 +265,9 @@ const PriorityQueue = () => {
             h.printArray(array, size);
           }
         }
-        `}</code>
-      </pre>
+      `}
+        language='java'
+      />
     </div>
   )
 }

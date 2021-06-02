@@ -1,26 +1,54 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+
+import Prism from "prismjs"
 
 // import Home from "./components/pages/Home"
 
 import "./assets/scss/style.scss"
+import "./assets/scss/prism.css"
 // import Header from "./components/layer/Header"
-import Footer from "./components/layer/Footer"
-import GraphExample from "./components/pages/Graph/GraphExample"
-import WhatIsGraph from "./components/pages/Graph/WhatIsGraph"
-import WhatisHashTable from "./components/pages/Hash/WhatIsHashTable"
-import DoublyList from "./components/pages/Lists/DoubleList"
-import SinglyList from "./components/pages/Lists/SinglyList"
-import WhatIsList from "./components/pages/Lists/WhatIsList"
-import PriorityQueue from "./components/pages/Queues/PriorityQueue"
-import Queues from "./components/pages/Queues/Queues"
-import WhatIsStack from "./components/pages/Queues/WhatIsStack"
-import DeleteTree from "./components/pages/Tree/DeleteTree"
-import InsertTree from "./components/pages/Tree/InsertTree"
-import WhatIsBinaryTree from "./components/pages/Tree/WhatIsBinaryTree"
-import Sider from "./containers/Sidebar"
+const GraphExample = React.lazy(() =>
+  import("./components/pages/Graph/GraphExample")
+)
+const WhatIsGraph = React.lazy(() =>
+  import("./components/pages/Graph/WhatIsGraph")
+)
+const WhatisHashTable = React.lazy(() =>
+  import("./components/pages/Hash/WhatIsHashTable")
+)
+const DoublyList = React.lazy(() =>
+  import("./components/pages/Lists/DoubleList")
+)
+const SinglyList = React.lazy(() =>
+  import("./components/pages/Lists/SinglyList")
+)
+const WhatIsList = React.lazy(() =>
+  import("./components/pages/Lists/WhatIsList")
+)
+const PriorityQueue = React.lazy(() =>
+  import("./components/pages/Queues/PriorityQueue")
+)
+const Queues = React.lazy(() => import("./components/pages/Queues/Queues"))
+const WhatIsStack = React.lazy(() =>
+  import("./components/pages/Queues/WhatIsStack")
+)
+const DeleteTree = React.lazy(() =>
+  import("./components/pages/Tree/DeleteTree")
+)
+const InsertTree = React.lazy(() =>
+  import("./components/pages/Tree/InsertTree")
+)
+const WhatIsBinaryTree = React.lazy(() =>
+  import("./components/pages/Tree/WhatIsBinaryTree")
+)
+const Sider = React.lazy(() => import("./containers/Sidebar"))
 
 function App() {
+  useEffect(() => {
+    setTimeout(() => Prism.highlightAll(), 0)
+  }, [])
+
   return (
     <div className='app'>
       <Router>
