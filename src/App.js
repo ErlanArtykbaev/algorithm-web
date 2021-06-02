@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
+const ListExample = React.lazy(() =>
+  import("./components/pages/Lists/ListExample")
+)
 const TreeExample = React.lazy(() =>
   import("./components/pages/Tree/TreeExample")
 )
@@ -58,7 +61,7 @@ function App() {
           <Route path='/lists/what-is-list' component={WhatIsList} exact />
           <Route path='/lists/singly' component={SinglyList} />
           <Route path='/lists/doubly' component={DoublyList} />
-          <Route path='/lists/visaul' component={SinglyList} />
+          <Route path='/lists/visual' component={ListExample} />
           <Route path='/queues/stecks' component={WhatIsStack} />
           <Route path='/queues/queues' component={Queues} />
           <Route path='/queues/priority' component={PriorityQueue} />
