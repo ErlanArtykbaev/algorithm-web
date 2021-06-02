@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
+const TreeExample = React.lazy(() =>
+  import("./components/pages/Tree/TreeExample")
+)
 const WhatIsBigO = React.lazy(() =>
   import("./components/pages/BigO/WhatIsBigO")
 )
@@ -65,7 +68,7 @@ function App() {
           <Route path='/binary/what-is-tree' component={WhatIsBinaryTree} />
           <Route path='/binary/add-element' component={InsertTree} />
           <Route path='/binary/delete-element' component={DeleteTree} />
-          <Route path='/binary/vizual' component={SinglyList} />
+          <Route path='/binary/vizual' component={TreeExample} />
           <Route path='/pyramids/what-is-pyramids' component={SinglyList} />
           <Route path='/pyramids/sort' component={SinglyList} />
           <Route path='/pyramids/vizual' component={SinglyList} />
