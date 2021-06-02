@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import "./assets/scss/style.scss"
 // import Header from "./components/layer/Header"
+const WhatIsBigO = React.lazy(() =>
+  import("./components/pages/BigO/WhatIsBigO")
+)
 const GraphExample = React.lazy(() =>
   import("./components/pages/Graph/GraphExample")
 )
@@ -57,7 +60,7 @@ function App() {
           <Route path='/queues/queues' component={Queues} />
           <Route path='/queues/priority' component={PriorityQueue} />
           <Route path='/queues/visualization' component={SinglyList} />
-          <Route path='/o/what-is-o' component={SinglyList} />
+          <Route path='/o/what-is-o' component={WhatIsBigO} />
           <Route path='/o/example' component={SinglyList} />
           <Route path='/binary/what-is-tree' component={WhatIsBinaryTree} />
           <Route path='/binary/add-element' component={InsertTree} />

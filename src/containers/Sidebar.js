@@ -9,8 +9,6 @@ import {
   DashboardOutlined,
   CaretUpOutlined,
   ForkOutlined,
-  ReadOutlined,
-  NodeExpandOutlined,
   RadarChartOutlined,
 } from "@ant-design/icons"
 // import { NavItems } from "./_nav"
@@ -26,7 +24,7 @@ const Sider = () => {
   return (
     <Menu
       onClick={handleClick}
-      style={{ width: 256 }}
+      style={{ width: 360 }}
       defaultSelectedKeys={["1"]}
       defaultOpenKeys={["lists"]}
       mode='inline'>
