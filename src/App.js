@@ -1,12 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-
-import Prism from "prismjs"
 
 // import Home from "./components/pages/Home"
 
 import "./assets/scss/style.scss"
-import "./assets/scss/prism.css"
 // import Header from "./components/layer/Header"
 const GraphExample = React.lazy(() =>
   import("./components/pages/Graph/GraphExample")
@@ -45,10 +42,6 @@ const WhatIsBinaryTree = React.lazy(() =>
 const Sider = React.lazy(() => import("./containers/Sidebar"))
 
 function App() {
-  useEffect(() => {
-    setTimeout(() => Prism.highlightAll(), 0)
-  }, [])
-
   return (
     <div className='app'>
       <Router>
