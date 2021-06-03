@@ -4,13 +4,17 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Home from "./components/pages/Home"
 
 import "./assets/scss/style.scss";
+
+// import Header from "./components/layer/Header"
+const GraphAlgorithms = React.lazy(() =>
+  import("./components/pages/Graph/GraphAlgorithms")
+);
 const WhatIsSort = React.lazy(() =>
   import("./components/pages/Sort/WhatIsSort")
 );
 const SortingVisualizer = React.lazy(() =>
   import("./components/pages/Sort/SortingVisualizer")
 );
-// import Header from "./components/layer/Header"
 const ListExample = React.lazy(() =>
   import("./components/pages/Lists/ListExample")
 );
@@ -86,7 +90,7 @@ function App() {
           <Route path="/hash/what-is-hash" component={WhatisHashTable} />
           <Route path="/hash/example" component={SinglyList} />
           <Route path="/graph/what-is-graph" component={WhatIsGraph} />
-          <Route path="/graph/algorithm" component={SinglyList} />
+          <Route path="/graph/algorithm" component={GraphAlgorithms} />
           <Route path="/graph/example" component={GraphExample} />
           <Route component={NotFound} />
         </Switch>
