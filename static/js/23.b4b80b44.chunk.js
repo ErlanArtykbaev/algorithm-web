@@ -1,0 +1,2 @@
+(this["webpackJsonpalgorithm-web"]=this["webpackJsonpalgorithm-web"]||[]).push([[23],{249:function(e,t,a){e.exports=a.p+"static/media/linkedlist.9bf624c0.mp4"},682:function(e,t,a){"use strict";a.r(t);var i=a(0),n=a.n(i),s=a(249),c=a.n(s);t.default=function(){return n.a.createElement("div",{className:"container"},n.a.createElement("h3",{className:"title"},"Example of Lists"),n.a.createElement("video",{controls:!0,width:"800px"},n.a.createElement("source",{src:c.a,type:"video/mp4"})))}}}]);
+//# sourceMappingURL=23.b4b80b44.chunk.js.map
