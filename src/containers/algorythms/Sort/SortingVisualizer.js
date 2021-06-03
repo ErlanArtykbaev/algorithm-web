@@ -1,9 +1,9 @@
-import React from 'react';
-import {getMergeSortAnimations} from './Algorithms/MergeSort';
-import {getQuickSortAnimations} from './Algorithms/QuickSort';
-import {getInsertionSortAnimations} from './Algorithms/InsertionSort';
-import {getSelectionSortAnimations} from './Algorithms/SelectionSort';
-import {getBubbleSortAnimations} from './Algorithms/BubbleSort';
+import React from "react";
+import { getMergeSortAnimations } from "./Algorithms/MergeSort";
+import { getQuickSortAnimations } from "./Algorithms/QuickSort";
+import { getInsertionSortAnimations } from "./Algorithms/InsertionSort";
+import { getSelectionSortAnimations } from "./Algorithms/SelectionSort";
+import { getBubbleSortAnimations } from "./Algorithms/BubbleSort";
 //Changing width,height accordingly with the browser
 let WINDOW_WIDTH = window.innerWidth;
 let WINDOW_HEIGHT = window.innerHeight / 2;
@@ -17,23 +17,22 @@ function reportWindowSize() {
 
 window.onresize = reportWindowSize; //TBD -> find a way to update state also when resized
 
-
-const PRIMARY_COLOR = 'turquoise'; //Normal color of bars
-const SECONDARY_COLOR = 'red'; //Color of bars when they are being compared
+const PRIMARY_COLOR = "#1890ff"; //Normal color of bars
+const SECONDARY_COLOR = "red"; //Color of bars when they are being compared
 const ANIMATION_SPEED_MS = 10; //Animation Speed (how fast color changes, how fast height gets overwritten)
 
 //Tooltips for buttons
-const DISABLED_BUTTON = "Currently Disabled"
+const DISABLED_BUTTON = "Currently Disabled";
 const ENABLED_BUTTON = {
   nlogn: "O(NlogN) Time Complexity",
-  nSquare: "O(N^2) Time Complexity"
-}
+  nSquare: "O(N^2) Time Complexity",
+};
 
 class SortingVisualizer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      array: []
+      array: [],
     };
   }
 
@@ -43,11 +42,11 @@ class SortingVisualizer extends React.Component {
 
   //Generates new random array
   resetArray() {
-    const array = []
+    const array = [];
     for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
       array.push(randomIntFromInterval(25, WINDOW_HEIGHT - 30));
     }
-    this.setState({array: array});
+    this.setState({ array: array });
     this.restoreStoreButtons();
   }
 
@@ -113,7 +112,6 @@ class SortingVisualizer extends React.Component {
     document.getElementById("insertionSort").title = ENABLED_BUTTON.nSquare;
     buttonStyle.background = "#47535E";
     buttonStyle.cursor = "pointer";
-
   }
 
   //Sorting Algorithms
@@ -121,11 +119,11 @@ class SortingVisualizer extends React.Component {
     this.disableSortButtons();
     const [animations] = getMergeSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
-      const isColorChange = (i % 3 !== 2);
-      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange = i % 3 !== 2;
+      const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
         const [barOneIndex, barTwoIndex] = animations[i];
-        const color = (i % 3 === 0) ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
         //If we don't multiply by the index then every animations[i] wait for exactly ANIMATION_SPEED_MS and immediately change into final state
@@ -133,7 +131,6 @@ class SortingVisualizer extends React.Component {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
         }, i * ANIMATION_SPEED_MS);
-
       } else {
         setTimeout(() => {
           const [barOneIdx, newHeight] = animations[i];
@@ -143,7 +140,9 @@ class SortingVisualizer extends React.Component {
       }
     }
     // this.setState({array: sortArray})
-    const RESTORE_TIME = parseInt(ANIMATION_SPEED_MS * animations.length / 2 + 3000);
+    const RESTORE_TIME = parseInt(
+      (ANIMATION_SPEED_MS * animations.length) / 2 + 3000
+    );
     setTimeout(() => this.restoreStoreButtons(), RESTORE_TIME);
   }
 
@@ -151,10 +150,10 @@ class SortingVisualizer extends React.Component {
     this.disableSortButtons();
     const [animations] = getQuickSortAnimations(this.state.array);
     for (let i = 0; i < animations.length - 1; i++) {
-      const isColorChange = (i % 6 === 0) || (i % 6 === 1);
-      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange = i % 6 === 0 || i % 6 === 1;
+      const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
-        const color = (i % 6 === 0) ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color = i % 6 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
         const [barOneIndex, barTwoIndex] = animations[i];
         if (barOneIndex === -1) {
           continue;
@@ -177,7 +176,9 @@ class SortingVisualizer extends React.Component {
       }
     }
     // this.setState({array: sortArray})
-    const RESTORE_TIME = parseInt(ANIMATION_SPEED_MS * animations.length / 2 + 3000);
+    const RESTORE_TIME = parseInt(
+      (ANIMATION_SPEED_MS * animations.length) / 2 + 3000
+    );
     setTimeout(() => this.restoreStoreButtons(), RESTORE_TIME);
   }
 
@@ -185,10 +186,10 @@ class SortingVisualizer extends React.Component {
     this.disableSortButtons();
     const [animations] = getBubbleSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
-      const isColorChange = (i % 4 === 0) || (i % 4 === 1);
-      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange = i % 4 === 0 || i % 4 === 1;
+      const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
-        const color = (i % 4 === 0) ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color = i % 4 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
         const [barOneIndex, barTwoIndex] = animations[i];
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
@@ -208,7 +209,9 @@ class SortingVisualizer extends React.Component {
       }
     }
     // this.setState({array: sortArray})
-    const RESTORE_TIME = parseInt(ANIMATION_SPEED_MS * animations.length / 2 + 3000);
+    const RESTORE_TIME = parseInt(
+      (ANIMATION_SPEED_MS * animations.length) / 2 + 3000
+    );
     setTimeout(() => this.restoreStoreButtons(), RESTORE_TIME);
   }
 
@@ -216,10 +219,13 @@ class SortingVisualizer extends React.Component {
     this.disableSortButtons();
     const [animations] = getInsertionSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
-      const isColorChange = (animations[i][0] === "comparision1") || (animations[i][0] === "comparision2");
-      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange =
+        animations[i][0] === "comparision1" ||
+        animations[i][0] === "comparision2";
+      const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
-        const color = (animations[i][0] === "comparision1") ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color =
+          animations[i][0] === "comparision1" ? SECONDARY_COLOR : PRIMARY_COLOR;
         const [barOneIndex, barTwoIndex] = animations[i];
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
@@ -236,7 +242,9 @@ class SortingVisualizer extends React.Component {
       }
     }
     // this.setState({array: sortArray})
-    const RESTORE_TIME = parseInt(ANIMATION_SPEED_MS * animations.length / 2 + 3000);
+    const RESTORE_TIME = parseInt(
+      (ANIMATION_SPEED_MS * animations.length) / 2 + 3000
+    );
     setTimeout(() => this.restoreStoreButtons(), RESTORE_TIME);
   }
 
@@ -244,10 +252,13 @@ class SortingVisualizer extends React.Component {
     this.disableSortButtons();
     const [animations] = getSelectionSortAnimations(this.state.array);
     for (let i = 0; i < animations.length; i++) {
-      const isColorChange = (animations[i][0] === "comparision1") || (animations[i][0] === "comparision2");
-      const arrayBars = document.getElementsByClassName('array-bar');
+      const isColorChange =
+        animations[i][0] === "comparision1" ||
+        animations[i][0] === "comparision2";
+      const arrayBars = document.getElementsByClassName("array-bar");
       if (isColorChange === true) {
-        const color = (animations[i][0] === "comparision1") ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color =
+          animations[i][0] === "comparision1" ? SECONDARY_COLOR : PRIMARY_COLOR;
         const [barOneIndex, barTwoIndex] = animations[i];
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
@@ -264,7 +275,9 @@ class SortingVisualizer extends React.Component {
       }
     }
     // this.setState({array: sortArray})
-    const RESTORE_TIME = parseInt(ANIMATION_SPEED_MS * animations.length / 2 + 3000);
+    const RESTORE_TIME = parseInt(
+      (ANIMATION_SPEED_MS * animations.length) / 2 + 3000
+    );
     setTimeout(() => this.restoreStoreButtons(), RESTORE_TIME);
   }
 
@@ -275,36 +288,52 @@ class SortingVisualizer extends React.Component {
     return (
       <div>
         <div className="array-container">
-          {
-            array.map((value, idx) => (
-              <div
-                className="array-bar"
-                key={idx}
-                style={{
-                  backgroundColor: PRIMARY_COLOR,
-                  height: `${value}px`
-                }}
-              > </div>
-            ))
-          }
+          {array.map((value, idx) => (
+            <div
+              className="array-bar"
+              key={idx}
+              style={{
+                backgroundColor: PRIMARY_COLOR,
+                height: `${value}px`,
+              }}>
+              {" "}
+            </div>
+          ))}
         </div>
         <div className="buttons">
-          <button title="Generates a new random array" onClick={() => this.resetArray()}>
+          <button
+            title="Generates a new random array"
+            onClick={() => this.resetArray()}>
             Generate New Array
           </button>
-          <button title="O(NlogN) Time Complexity" id="mergeSort" onClick={() => this.mergeSort()}>
+          <button
+            title="O(NlogN) Time Complexity"
+            id="mergeSort"
+            onClick={() => this.mergeSort()}>
             Merge Sort
           </button>
-          <button title="O(N^2) Time Complexity" id="quickSort" onClick={() => this.quickSort()}>
+          <button
+            title="O(N^2) Time Complexity"
+            id="quickSort"
+            onClick={() => this.quickSort()}>
             Quick Sort
           </button>
-          <button title="O(N^2) Time Complexity" id="bubbleSort" onClick={() => this.bubbleSort()}>
+          <button
+            title="O(N^2) Time Complexity"
+            id="bubbleSort"
+            onClick={() => this.bubbleSort()}>
             Bubble Sort
           </button>
-          <button title="O(N^2) Time Complexity" id="insertionSort" onClick={() => this.insertionSort()}>
+          <button
+            title="O(N^2) Time Complexity"
+            id="insertionSort"
+            onClick={() => this.insertionSort()}>
             Insertion Sort
           </button>
-          <button title="O(N^2) Time Complexity" id="selectionSort" onClick={() => this.selectionSort()}>
+          <button
+            title="O(N^2) Time Complexity"
+            id="selectionSort"
+            onClick={() => this.selectionSort()}>
             Selection Sort
           </button>
         </div>
@@ -313,12 +342,9 @@ class SortingVisualizer extends React.Component {
   }
 }
 
-
 function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export default SortingVisualizer;
-
-
