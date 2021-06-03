@@ -84,9 +84,6 @@ function App() {
           <Route path="/sort/what-is-sort" component={WhatIsSort} />
           <Route path="/binary/delete-element" component={DeleteTree} />
           <Route path="/binary/vizual" component={TreeExample} />
-          <Route path="/pyramids/what-is-pyramids" component={SinglyList} />
-          <Route path="/pyramids/sort" component={SinglyList} />
-          <Route path="/pyramids/vizual" component={SinglyList} />
           <Route path="/hash/what-is-hash" component={WhatisHashTable} />
           <Route path="/hash/example" component={SinglyList} />
           <Route path="/graph/what-is-graph" component={WhatIsGraph} />

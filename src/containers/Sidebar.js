@@ -67,21 +67,11 @@ const Sider = () => {
             Priority Queues
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="8">
-          <NavLink to="/queues/visalization" className="nav-link">
-            Example
-          </NavLink>
-        </Menu.Item>
       </SubMenu>
       <SubMenu key="o" icon={<DashboardOutlined />} title="Big O">
         <Menu.Item key="9">
           <NavLink to="/o/what-is-o" className="nav-link">
             What is Big O
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="10">
-          <NavLink to="/o/example" className="nav-link">
-            Example
           </NavLink>
         </Menu.Item>
       </SubMenu>
@@ -122,32 +112,10 @@ const Sider = () => {
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key="pyramids" icon={<CaretUpOutlined />} title="Pyramids">
-        <Menu.Item key="18">
-          <NavLink to="/pyramids/what-is-pyramdis" className="nav-link">
-            What is pyramids
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="19">
-          <NavLink to="/pyramids/sort" className="nav-link">
-            Pyramidical sort
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="20">
-          <NavLink to="/pyramids/vizual" className="nav-link">
-            Example
-          </NavLink>
-        </Menu.Item>
-      </SubMenu>
       <SubMenu key="hash" icon={<ForkOutlined />} title="Hash table">
         <Menu.Item key="21">
           <NavLink to="/hash/what-is-hash" className="nav-link">
             What is has table
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="22">
-          <NavLink to="/hash/example" className="nav-link">
-            Example
           </NavLink>
         </Menu.Item>
       </SubMenu>
