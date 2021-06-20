@@ -1,6 +1,6 @@
 import React from 'react'
 
-import img from '../../assets/img/home/cover-artwork.png'
+import img from '../../assets/img/main-image.svg'
 
 const MainHomeInfo = () => {
   return (

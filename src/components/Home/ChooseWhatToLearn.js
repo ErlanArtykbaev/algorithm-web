@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import ChooseItem from "./ChooseItem";
 
@@ -7,24 +7,28 @@ import { NavLink } from "react-router-dom";
 import ArrowRightAltRoundedIcon from "@material-ui/icons/ArrowRightAltRounded";
 
 const ChooseWhatToLearn = () => {
+  const [courses, setCourses] = useState('')
+  useEffect(() => {
+    fetch('http://localhost:3004/courses', {
+      method: "GET"
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCourses([...data])
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
   return (
     <div className="choose-what-to-lrn">
       <div className="choose-what-to-lrn-text">
         <h3>Choose what to learn</h3>
         <p>Start learning popular algorithms</p>
       </div>
-      <ChooseItem img={algoImg} title="Binary Tree" url="/binary-tree" />
-      <ChooseItem img={algoImg} title="Binary Tree" url="/binary-tree" />
-      <ChooseItem img={algoImg} title="Binary Tree" url="/binary-tree" />
-      <ChooseItem img={algoImg} title="Binary Tree" url="/binary-tree" />
-      <NavLink to="/more">
-        <div className="choose-what-to-lrn-more">
-          <div className="more-text">
-            <p>Learn More</p>
-            <ArrowRightAltRoundedIcon />
-          </div>
-        </div>
-      </NavLink>
+      {courses && courses.map(item => (
+        <ChooseItem key={item.id} id={item.id} title={item.name} url={`/course/${item.id}`} />
+      ))}
     </div>
   );
 };

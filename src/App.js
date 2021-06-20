@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./assets/scss/style.scss";
-import Course from "./components/pages/Course";
+const Course = React.lazy( () => import("./components/pages/Course"))
 
 const Home = React.lazy(() => import('./components/pages/Home'))
 
