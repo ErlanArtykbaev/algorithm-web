@@ -54,13 +54,13 @@ const InsertTree = React.lazy(() =>
 const WhatIsBinaryTree = React.lazy(() =>
   import("./Tree/WhatIsBinaryTree")
 );
-const Sider = React.lazy(() => import("../../containers/Sidebar"));
+const Sidebar = React.lazy(() => import("../../containers/Sidebar"));
 
 const Course = (props) => {
   return(
     <Router>
       {/* <Header /> */}
-      <Sider />
+      <Sidebar />
       <Switch>
         <Route path="/course/1/lists/what-is-list" component={WhatIsList} exact />
         <Route path="/course/1/lists/singly" component={SinglyList} />
